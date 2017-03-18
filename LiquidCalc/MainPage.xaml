@@ -45,7 +45,7 @@
                 <TextBox x:Name="CostAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="CostBaseTextBox" RelativePanel.AlignLeftWith="CostBaseTextBox" Width="80" TextChanged="CostAromaTextBox_TextChanged"></TextBox>
                 <TextBlock RelativePanel.RightOf="CostAromaTextBox" RelativePanel.AlignVerticalCenterWith="CostAromaTextBox">€ pro 100ml</TextBlock>
             </RelativePanel>
-            <RelativePanel x:Name="BottomLeftPanel" Margin="15,15,15,15" RelativePanel.Below="TopLeftPanel">
+            <RelativePanel x:Name="BottomLeftPanel" Margin="15,15,15,15" RelativePanel.Below="TopLeftPanel" RelativePanel.AlignHorizontalCenterWith="TopLeftPanel">
                 <TextBlock x:Name="ResultsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengenausgabe</TextBlock>
 
                 <TextBlock x:Name="NicotineTextBox" Margin="0,6,12,0" RelativePanel.Below="ResultsTitle">Nikotinkonzentrat:</TextBlock>
@@ -61,7 +61,7 @@
                 <TextBlock x:Name="AromaUnitTextBox" RelativePanel.RightOf="AromaResultTextBox" RelativePanel.AlignBottomWith="AromaTextBox">ml</TextBlock>
 
             </RelativePanel>
-            <RelativePanel x:Name="BottomRightPanel" Margin="15,15,15,15" RelativePanel.RightOf="BottomLeftPanel" RelativePanel.Below="TopLeftPanel">
+            <RelativePanel x:Name="BottomRightPanel" Margin="15,15,15,15" RelativePanel.RightOf="BottomLeftPanel" RelativePanel.AlignHorizontalCenterWith="TopRightPanel" RelativePanel.Below="TopLeftPanel">
                 <TextBlock x:Name="CostsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Kostenausgabe</TextBlock>
 
                 <TextBlock x:Name="NicotineCostTextBox" Margin="0,6,12,0" RelativePanel.Below="CostsTitle">Nikotinkonzentrat:</TextBlock>
@@ -81,7 +81,7 @@
                 <TextBlock x:Name="SumCostUnitTextBox" RelativePanel.RightOf="SumCostResultTextBox" RelativePanel.AlignBottomWith="SumCostTextBox">€</TextBlock>
             </RelativePanel>
 
-            <Button x:Name="Calculate" FontSize="25" Margin="12,12,12,12" Click="Calculate_Click" RelativePanel.AlignHorizontalCenterWith="TopRightPanel" RelativePanel.AlignVerticalCenterWith="BottomLeftPanel">Berechnen</Button>
+            <Button x:Name="Calculate" FontSize="25" Margin="12,12,12,12" Click="Calculate_Click" RelativePanel.Below="BottomRightPanel" RelativePanel.AlignHorizontalCenterWithPanel="True">Berechnen</Button>
         </RelativePanel>
     </RelativePanel>
 </Page>
