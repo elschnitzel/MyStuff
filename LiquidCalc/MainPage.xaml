@@ -13,7 +13,7 @@
             <RelativePanel x:Name="TopLeftPanel" Margin="15,15,15,15" RelativePanel.Below="TitleTextBlock">
                 <TextBlock x:Name="AmountsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengeneingabe</TextBlock>
 
-                <TextBlock x:Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle">Gesamtmenge erstelltes Liquid</TextBlock>
+                <TextBlock x:Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle" Foreground="Black">Gesamtmenge erstelltes Liquid</TextBlock>
                 <TextBox x:Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.Below="AmountsTitle" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
                 <TextBlock RelativePanel.RightOf="TargetLiquidAmountTextBox" RelativePanel.AlignVerticalCenterWith="TargetLiquidAmountTextBox">ml</TextBlock>
 
