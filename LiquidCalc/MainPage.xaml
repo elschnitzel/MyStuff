@@ -8,9 +8,21 @@
     mc:Ignorable="d">
 
     <RelativePanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
-        <Button RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True">
-            <TextBlock>Hallo Welt</TextBlock>
-        </Button>
+        <TextBlock Name="TitleTextBlock" FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
+        <RelativePanel Name="LeftPanel" Margin="500,0,0,0" RelativePanel.Below="TitleTextBlock">
+            <TextBlock Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0">Gesamtmenge erstelltes Liquid</TextBlock>
+            <TextBox Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80"></TextBox>
+
+            <TextBlock Name="UsedNicotinStrengthTextBlock" Margin="0,17,12,0" RelativePanel.Below="TargetLiquidAmountTextBlock" >Nikotinmenge Konzentrat</TextBlock>
+            <TextBox Name="UsedNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetLiquidAmountTextBox" RelativePanel.AlignLeftWith="TargetLiquidAmountTextBox" Width="80"></TextBox>
+            
+            <TextBlock Name="TargetNicotinStrengthTextBlock" Margin="0,17,12,0" RelativePanel.Below="UsedNicotinStrengthTextBlock" >Zielmenge Nikotin</TextBlock>
+            <TextBox Name="TargetNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="UsedNicotinStrengthTextBlock" RelativePanel.AlignLeftWith="UsedNicotinStrengthTextBox" Width="80"></TextBox>
+            
+            
+        </RelativePanel>
+        <RelativePanel Name="RightPanel" RelativePanel.RightOf="LeftPanel">
+            
+        </RelativePanel>
     </RelativePanel>
 </Page>
