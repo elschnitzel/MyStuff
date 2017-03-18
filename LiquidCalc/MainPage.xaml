@@ -8,29 +8,31 @@
     mc:Ignorable="d">
 
     <RelativePanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Name="TitleTextBlock" Margin="0,0,0,12" FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
-        <RelativePanel Name="LeftPanel" Margin="500,0,0,0" RelativePanel.Below="TitleTextBlock">
-            <TextBlock Name="AmountsTitle" FontSize="25" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengen</TextBlock>
-            
-            <TextBlock Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle">Gesamtmenge erstelltes Liquid</TextBlock>
-            <TextBox Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.Below="AmountsTitle" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
-            <TextBlock RelativePanel.RightOf="TargetLiquidAmountTextBox" RelativePanel.AlignVerticalCenterWith="TargetLiquidAmountTextBox">ml</TextBlock>
+        <RelativePanel Name="MainPanel" RelativePanel.AlignHorizontalCenterWithPanel="True">
+            <TextBlock Name="TitleTextBlock" Margin="0,0,0,12" FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
+            <RelativePanel Name="LeftPanel" Margin="0,0,0,0" RelativePanel.Below="TitleTextBlock">
+                <TextBlock Name="AmountsTitle" FontSize="25" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengen</TextBlock>
 
-            <TextBlock Name="UsedNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetLiquidAmountTextBlock" >Nikotinmenge Konzentrat</TextBlock>
-            <TextBox Name="UsedNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetLiquidAmountTextBox" RelativePanel.AlignLeftWith="TargetLiquidAmountTextBox" Width="80" TextChanged="UsedNicotinStrengthTextBox_TextChanged"></TextBox>
-            <TextBlock RelativePanel.RightOf="UsedNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="UsedNicotinStrengthTextBox">mg/ml</TextBlock>
-            
-            <TextBlock Name="TargetNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="UsedNicotinStrengthTextBlock" >Zielmenge Nikotin</TextBlock>
-            <TextBox Name="TargetNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="UsedNicotinStrengthTextBox" RelativePanel.AlignLeftWith="UsedNicotinStrengthTextBox" Width="80" TextChanged="TargetNicotinStrengthTextBox_TextChanged"></TextBox>
-            <TextBlock RelativePanel.RightOf="TargetNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="TargetNicotinStrengthTextBox">mg/ml</TextBlock>
+                <TextBlock Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle">Gesamtmenge erstelltes Liquid</TextBlock>
+                <TextBox Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.Below="AmountsTitle" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
+                <TextBlock RelativePanel.RightOf="TargetLiquidAmountTextBox" RelativePanel.AlignVerticalCenterWith="TargetLiquidAmountTextBox">ml</TextBlock>
 
-            <TextBlock Name="UsedAmoutOfAromaTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetNicotinStrengthTextBlock">Menge Aroma</TextBlock>
-            <TextBox Name="UsedAmoutOfAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetNicotinStrengthTextBox" RelativePanel.AlignLeftWith="TargetNicotinStrengthTextBox" Width="80" TextChanged="UsedAmoutOfAromaTextBox_TextChanged"></TextBox>
-            <TextBlock RelativePanel.RightOf="UsedAmoutOfAromaTextBox" RelativePanel.AlignVerticalCenterWith="UsedAmoutOfAromaTextBox">%</TextBlock>
-            
-        </RelativePanel>
-        <RelativePanel Name="RightPanel" RelativePanel.RightOf="LeftPanel" RelativePanel.Below="TitleTextBlock">
-            
+                <TextBlock Name="UsedNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetLiquidAmountTextBlock" >Nikotinmenge Konzentrat</TextBlock>
+                <TextBox Name="UsedNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetLiquidAmountTextBox" RelativePanel.AlignLeftWith="TargetLiquidAmountTextBox" Width="80" TextChanged="UsedNicotinStrengthTextBox_TextChanged"></TextBox>
+                <TextBlock RelativePanel.RightOf="UsedNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="UsedNicotinStrengthTextBox">mg/ml</TextBlock>
+
+                <TextBlock Name="TargetNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="UsedNicotinStrengthTextBlock" >Zielmenge Nikotin</TextBlock>
+                <TextBox Name="TargetNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="UsedNicotinStrengthTextBox" RelativePanel.AlignLeftWith="UsedNicotinStrengthTextBox" Width="80" TextChanged="TargetNicotinStrengthTextBox_TextChanged"></TextBox>
+                <TextBlock RelativePanel.RightOf="TargetNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="TargetNicotinStrengthTextBox">mg/ml</TextBlock>
+
+                <TextBlock Name="UsedAmoutOfAromaTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetNicotinStrengthTextBlock">Menge Aroma</TextBlock>
+                <TextBox Name="UsedAmoutOfAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetNicotinStrengthTextBox" RelativePanel.AlignLeftWith="TargetNicotinStrengthTextBox" Width="80" TextChanged="UsedAmoutOfAromaTextBox_TextChanged"></TextBox>
+                <TextBlock RelativePanel.RightOf="UsedAmoutOfAromaTextBox" RelativePanel.AlignVerticalCenterWith="UsedAmoutOfAromaTextBox">%</TextBlock>
+
+            </RelativePanel>
+            <RelativePanel Name="RightPanel" RelativePanel.RightOf="LeftPanel" RelativePanel.Below="TitleTextBlock">
+
+            </RelativePanel>
         </RelativePanel>
     </RelativePanel>
 </Page>
