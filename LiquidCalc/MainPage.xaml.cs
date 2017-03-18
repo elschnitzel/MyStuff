@@ -29,9 +29,28 @@ namespace LiquidCalc
             Application.Current.DebugSettings.EnableFrameRateCounter = false;
         }
 
+        private string targetLiquidAmountLastValidInput = "";
+        private double targetLiquidAmount;
         private void TargetLiquidAmountTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            try
+            {
+                if(TargetLiquidAmountTextBox.Text == "")
+                {
+                    targetLiquidAmount = 0;
+                }
+                else
+                {
+                    targetLiquidAmount = Convert.ToDouble(TargetLiquidAmountTextBox.Text);
+                }
 
+                targetLiquidAmountLastValidInput = targetLiquidAmount.ToString();
+            }
+            catch
+            {
+                TargetLiquidAmountTextBox.Text = targetLiquidAmountLastValidInput;
+                TargetLiquidAmountTextBox.Select(TargetLiquidAmountTextBox.Text.Length, 0);
+            }
         }
 
         private void UsedNicotinStrengthTextBox_TextChanged(object sender, TextChangedEventArgs e)
