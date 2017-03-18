@@ -7,9 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button>
+    <RelativePanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
+        <Button RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True">
             <TextBlock>Hallo Welt</TextBlock>
         </Button>
-    </Grid>
+    </RelativePanel>
 </Page>

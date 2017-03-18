@@ -25,6 +25,8 @@ namespace LiquidCalc
         public MainPage()
         {
             this.InitializeComponent();
+
+            Application.Current.DebugSettings.EnableFrameRateCounter = false;
         }
     }
 }
