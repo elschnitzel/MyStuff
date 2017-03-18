@@ -41,6 +41,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    TargetLiquidAmountTextBox.Text = TargetLiquidAmountTextBox.Text.Replace(',', '.');
+                    TargetLiquidAmountTextBox.Select(TargetLiquidAmountTextBox.Text.Length, 0);
                     targetLiquidAmount = Convert.ToDouble(TargetLiquidAmountTextBox.Text);
                 }
 
@@ -65,6 +67,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    UsedNicotinStrengthTextBox.Text = UsedNicotinStrengthTextBox.Text.Replace(',', '.');
+                    UsedNicotinStrengthTextBox.Select(UsedNicotinStrengthTextBox.Text.Length, 0);
                     usedNicotineStrength = Convert.ToDouble(UsedNicotinStrengthTextBox.Text);
                 }
 
@@ -89,6 +93,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    TargetNicotinStrengthTextBox.Text = TargetNicotinStrengthTextBox.Text.Replace(',', '.');
+                    TargetNicotinStrengthTextBox.Select(TargetNicotinStrengthTextBox.Text.Length, 0);
                     targetNicotinStrength = Convert.ToDouble(TargetNicotinStrengthTextBox.Text);
                 }
 
@@ -113,6 +119,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    UsedAmoutOfAromaTextBox.Text = UsedAmoutOfAromaTextBox.Text.Replace(',', '.');
+                    UsedAmoutOfAromaTextBox.Select(UsedAmoutOfAromaTextBox.Text.Length, 0);
                     usedAmountOfAroma = Convert.ToDouble(UsedAmoutOfAromaTextBox.Text);
                 }
 
@@ -137,6 +145,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    CostNicotineConcentrateTextBox.Text = CostNicotineConcentrateTextBox.Text.Replace(',', '.');
+                    CostNicotineConcentrateTextBox.Select(CostNicotineConcentrateTextBox.Text.Length, 0);
                     costNicotineConcentrate = Convert.ToDouble(CostNicotineConcentrateTextBox.Text);
                 }
 
@@ -161,6 +171,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    CostBaseTextBox.Text = CostBaseTextBox.Text.Replace(',', '.');
+                    CostBaseTextBox.Select(CostBaseTextBox.Text.Length, 0);
                     costBase = Convert.ToDouble(CostBaseTextBox.Text);
                 }
 
@@ -185,6 +197,8 @@ namespace LiquidCalc
                 }
                 else
                 {
+                    CostAromaTextBox.Text = CostAromaTextBox.Text.Replace(',', '.');
+                    CostAromaTextBox.Select(CostAromaTextBox.Text.Length, 0);
                     costAroma = Convert.ToDouble(CostAromaTextBox.Text);
                 }
 
@@ -199,7 +213,21 @@ namespace LiquidCalc
 
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
+            double nicotineAmount = targetLiquidAmount / (usedNicotineStrength / targetNicotinStrength);
+            double baseAmount = targetLiquidAmount - nicotineAmount - ((usedAmountOfAroma / 100.0) * targetLiquidAmount);
+            double aromaAmout = (usedAmountOfAroma / 100.0) * targetLiquidAmount;
+            double nicotineCost = nicotineAmount * (costNicotineConcentrate / 100.0);
+            double baseCost = baseAmount * (costBase / 100.0);
+            double aromaCost = aromaAmout * (costAroma / 100.0);
+            double sum = nicotineCost + baseCost + aromaCost;
 
+            NicotineResultTextBox.Text = nicotineAmount.ToString();
+            BaseResultTextBox.Text = baseAmount.ToString();
+            AromaResultTextBox.Text = aromaAmout.ToString();
+            NicotineCostResultTextBox.Text = nicotineCost.ToString();
+            BaseCostResultTextBox.Text = baseCost.ToString();
+            AromaCostResultTextBox.Text = aromaCost.ToString();
+            SumCostResultTextBox.Text = sum.ToString();
         }
     }
 }
