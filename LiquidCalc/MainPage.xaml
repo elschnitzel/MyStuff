@@ -10,8 +10,10 @@
     <RelativePanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock Name="TitleTextBlock" Margin="0,0,0,12" FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
         <RelativePanel Name="LeftPanel" Margin="500,0,0,0" RelativePanel.Below="TitleTextBlock">
-            <TextBlock Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0">Gesamtmenge erstelltes Liquid</TextBlock>
-            <TextBox Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
+            <TextBlock Name="AmountsTitle" FontSize="25" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengen</TextBlock>
+            
+            <TextBlock Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle">Gesamtmenge erstelltes Liquid</TextBlock>
+            <TextBox Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.Below="AmountsTitle" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
             <TextBlock RelativePanel.RightOf="TargetLiquidAmountTextBox" RelativePanel.AlignVerticalCenterWith="TargetLiquidAmountTextBox">ml</TextBlock>
 
             <TextBlock Name="UsedNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetLiquidAmountTextBlock" >Nikotinmenge Konzentrat</TextBlock>
