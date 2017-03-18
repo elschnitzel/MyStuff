@@ -48,5 +48,20 @@ namespace LiquidCalc
         {
 
         }
+
+        private void CostNicotineConcentrate_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CostBaseTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CostAromaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
