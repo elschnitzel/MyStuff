@@ -28,5 +28,25 @@ namespace LiquidCalc
 
             Application.Current.DebugSettings.EnableFrameRateCounter = false;
         }
+
+        private void TargetLiquidAmountTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void UsedNicotinStrengthTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TargetNicotinStrengthTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void UsedAmoutOfAromaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
