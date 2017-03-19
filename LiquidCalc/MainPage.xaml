@@ -8,80 +8,88 @@
     mc:Ignorable="d">
 
     <RelativePanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <RelativePanel x:Name="MainPanel" RelativePanel.AlignHorizontalCenterWithPanel="True">
-            <TextBlock x:Name="TitleTextBlock" Margin="0,0,0,12" FontSize="30" RelativePanel.AlignHorizontalCenterWithPanel="True">Liquid Calculator</TextBlock>
-            <RelativePanel x:Name="TopLeftPanel" Margin="15,15,15,15" RelativePanel.Below="TitleTextBlock">
-                <TextBlock x:Name="AmountsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengeneingabe</TextBlock>
+        <Pivot x:Name="Mengeneingabe" Title="Liquid Calculator">
+            <PivotItem Header="Berechnung">
+                <RelativePanel x:Name="MainPanel" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,25,0,0">
+                    <RelativePanel x:Name="TopLeftPanel" Margin="15,15,15,15" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                        <TextBlock x:Name="AmountsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengeneingabe</TextBlock>
 
-                <TextBlock x:Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle" Foreground="Black">Gesamtmenge erstelltes Liquid</TextBlock>
-                <TextBox x:Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.Below="AmountsTitle" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="TargetLiquidAmountTextBox" RelativePanel.AlignVerticalCenterWith="TargetLiquidAmountTextBox">ml</TextBlock>
+                        <TextBlock x:Name="TargetLiquidAmountTextBlock" Margin="0,6,12,0" RelativePanel.Below="AmountsTitle" Foreground="Black">Gesamtmenge erstelltes Liquid</TextBlock>
+                        <TextBox x:Name="TargetLiquidAmountTextBox" Margin="0,0,0,8" RelativePanel.Below="AmountsTitle" RelativePanel.RightOf="TargetLiquidAmountTextBlock" Width="80" TextChanged="TargetLiquidAmountTextBox_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="TargetLiquidAmountTextBox" RelativePanel.AlignVerticalCenterWith="TargetLiquidAmountTextBox">ml</TextBlock>
 
-                <TextBlock x:Name="UsedNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetLiquidAmountTextBlock" >Nikotinmenge Konzentrat</TextBlock>
-                <TextBox x:Name="UsedNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetLiquidAmountTextBox" RelativePanel.AlignLeftWith="TargetLiquidAmountTextBox" Width="80" TextChanged="UsedNicotinStrengthTextBox_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="UsedNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="UsedNicotinStrengthTextBox">mg/ml</TextBlock>
+                        <TextBlock x:Name="UsedNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetLiquidAmountTextBlock" >Nikotinmenge Konzentrat</TextBlock>
+                        <TextBox x:Name="UsedNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetLiquidAmountTextBox" RelativePanel.AlignLeftWith="TargetLiquidAmountTextBox" Width="80" TextChanged="UsedNicotinStrengthTextBox_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="UsedNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="UsedNicotinStrengthTextBox">mg/ml</TextBlock>
 
-                <TextBlock x:Name="TargetNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="UsedNicotinStrengthTextBlock" >Zielmenge Nikotin</TextBlock>
-                <TextBox x:Name="TargetNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="UsedNicotinStrengthTextBox" RelativePanel.AlignLeftWith="UsedNicotinStrengthTextBox" Width="80" TextChanged="TargetNicotinStrengthTextBox_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="TargetNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="TargetNicotinStrengthTextBox">mg/ml</TextBlock>
+                        <TextBlock x:Name="TargetNicotinStrengthTextBlock" Margin="0,18,12,0" RelativePanel.Below="UsedNicotinStrengthTextBlock" >Zielmenge Nikotin</TextBlock>
+                        <TextBox x:Name="TargetNicotinStrengthTextBox" Margin="0,0,0,8" RelativePanel.Below="UsedNicotinStrengthTextBox" RelativePanel.AlignLeftWith="UsedNicotinStrengthTextBox" Width="80" TextChanged="TargetNicotinStrengthTextBox_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="TargetNicotinStrengthTextBox" RelativePanel.AlignVerticalCenterWith="TargetNicotinStrengthTextBox">mg/ml</TextBlock>
 
-                <TextBlock x:Name="UsedAmoutOfAromaTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetNicotinStrengthTextBlock">Menge Aroma</TextBlock>
-                <TextBox x:Name="UsedAmoutOfAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetNicotinStrengthTextBox" RelativePanel.AlignLeftWith="TargetNicotinStrengthTextBox" Width="80" TextChanged="UsedAmoutOfAromaTextBox_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="UsedAmoutOfAromaTextBox" RelativePanel.AlignVerticalCenterWith="UsedAmoutOfAromaTextBox">%</TextBlock>
+                        <TextBlock x:Name="UsedAmoutOfAromaTextBlock" Margin="0,18,12,0" RelativePanel.Below="TargetNicotinStrengthTextBlock">Menge Aroma</TextBlock>
+                        <TextBox x:Name="UsedAmoutOfAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="TargetNicotinStrengthTextBox" RelativePanel.AlignLeftWith="TargetNicotinStrengthTextBox" Width="80" TextChanged="UsedAmoutOfAromaTextBox_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="UsedAmoutOfAromaTextBox" RelativePanel.AlignVerticalCenterWith="UsedAmoutOfAromaTextBox">%</TextBlock>
 
-            </RelativePanel>
-            <RelativePanel x:Name="TopRightPanel" Margin="15,15,15,15" RelativePanel.RightOf="TopLeftPanel" RelativePanel.Below="TitleTextBlock">
-                <TextBlock x:Name="MoneyTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Kosteneingabe</TextBlock>
+                    </RelativePanel>
+                    <RelativePanel x:Name="BottomPanel" RelativePanel.Below="TopLeftPanel" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                        <RelativePanel x:Name="BottomLeftPanel" Margin="15,15,15,15">
+                            <TextBlock x:Name="ResultsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengenausgabe</TextBlock>
 
-                <TextBlock x:Name="CostNicotineConcentrateTextBlock" Margin="0,6,12,0" RelativePanel.Below="MoneyTitle">Preis Nikotinkonzentrat</TextBlock>
-                <TextBox x:Name="CostNicotineConcentrateTextBox" Margin="0,0,0,8" RelativePanel.Below="MoneyTitle" RelativePanel.RightOf="CostNicotineConcentrateTextBlock" Width="80" TextChanged="CostNicotineConcentrate_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="CostNicotineConcentrateTextBox" RelativePanel.AlignVerticalCenterWith="CostNicotineConcentrateTextBox">€ pro 100ml</TextBlock>
+                            <TextBlock x:Name="NicotineTextBox" Margin="0,6,12,0" RelativePanel.Below="ResultsTitle">Nikotinkonzentrat:</TextBlock>
+                            <TextBlock x:Name="NicotineResultTextBox" RelativePanel.RightOf="NicotineTextBox" RelativePanel.AlignBottomWith="NicotineTextBox">0</TextBlock>
+                            <TextBlock x:Name="NicotineUnitTextBox" RelativePanel.RightOf="NicotineResultTextBox" RelativePanel.AlignBottomWith="NicotineTextBox">ml</TextBlock>
 
-                <TextBlock x:Name="CostBaseTextBlock" Margin="0,18,12,0" RelativePanel.Below="CostNicotineConcentrateTextBlock" >Preis Base</TextBlock>
-                <TextBox x:Name="CostBaseTextBox" Margin="0,0,0,8" RelativePanel.Below="CostNicotineConcentrateTextBox" RelativePanel.AlignLeftWith="CostNicotineConcentrateTextBox" Width="80" TextChanged="CostBaseTextBox_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="CostBaseTextBox" RelativePanel.AlignVerticalCenterWith="CostBaseTextBox">€ pro 100ml</TextBlock>
+                            <TextBlock x:Name="BaseTextBox" Margin="0,6,12,0" RelativePanel.Below="NicotineTextBox">Basis:</TextBlock>
+                            <TextBlock x:Name="BaseResultTextBox" RelativePanel.RightOf="BaseTextBox" RelativePanel.AlignLeftWith="NicotineResultTextBox" RelativePanel.AlignBottomWith="BaseTextBox">0</TextBlock>
+                            <TextBlock x:Name="BaseUnitTextBox" RelativePanel.RightOf="BaseResultTextBox" RelativePanel.AlignBottomWith="BaseTextBox">ml</TextBlock>
 
-                <TextBlock x:Name="CostAromaTextBlock" Margin="0,18,12,0" RelativePanel.Below="CostBaseTextBlock" >Preis Aroma</TextBlock>
-                <TextBox x:Name="CostAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="CostBaseTextBox" RelativePanel.AlignLeftWith="CostBaseTextBox" Width="80" TextChanged="CostAromaTextBox_TextChanged"></TextBox>
-                <TextBlock RelativePanel.RightOf="CostAromaTextBox" RelativePanel.AlignVerticalCenterWith="CostAromaTextBox">€ pro 100ml</TextBlock>
-            </RelativePanel>
-            <RelativePanel x:Name="BottomLeftPanel" Margin="15,15,15,15" RelativePanel.Below="TopLeftPanel" RelativePanel.AlignHorizontalCenterWith="TopLeftPanel">
-                <TextBlock x:Name="ResultsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Mengenausgabe</TextBlock>
+                            <TextBlock x:Name="AromaTextBox" Margin="0,6,12,0" RelativePanel.Below="BaseTextBox">Aroma:</TextBlock>
+                            <TextBlock x:Name="AromaResultTextBox" RelativePanel.RightOf="AromaTextBox" RelativePanel.AlignLeftWith="NicotineResultTextBox" RelativePanel.AlignBottomWith="AromaTextBox">0</TextBlock>
+                            <TextBlock x:Name="AromaUnitTextBox" RelativePanel.RightOf="AromaResultTextBox" RelativePanel.AlignBottomWith="AromaTextBox">ml</TextBlock>
 
-                <TextBlock x:Name="NicotineTextBox" Margin="0,6,12,0" RelativePanel.Below="ResultsTitle">Nikotinkonzentrat:</TextBlock>
-                <TextBlock x:Name="NicotineResultTextBox" RelativePanel.RightOf="NicotineTextBox" RelativePanel.AlignBottomWith="NicotineTextBox">0</TextBlock>
-                <TextBlock x:Name="NicotineUnitTextBox" RelativePanel.RightOf="NicotineResultTextBox" RelativePanel.AlignBottomWith="NicotineTextBox">ml</TextBlock>
+                        </RelativePanel>
+                        <RelativePanel x:Name="BottomRightPanel" Margin="15,15,15,15" RelativePanel.RightOf="BottomLeftPanel" >
+                            <TextBlock x:Name="CostsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Kostenausgabe</TextBlock>
 
-                <TextBlock x:Name="BaseTextBox" Margin="0,6,12,0" RelativePanel.Below="NicotineTextBox">Basis:</TextBlock>
-                <TextBlock x:Name="BaseResultTextBox" RelativePanel.RightOf="BaseTextBox" RelativePanel.AlignLeftWith="NicotineResultTextBox" RelativePanel.AlignBottomWith="BaseTextBox">0</TextBlock>
-                <TextBlock x:Name="BaseUnitTextBox" RelativePanel.RightOf="BaseResultTextBox" RelativePanel.AlignBottomWith="BaseTextBox">ml</TextBlock>
+                            <TextBlock x:Name="NicotineCostTextBox" Margin="0,6,12,0" RelativePanel.Below="CostsTitle">Nikotinkonzentrat:</TextBlock>
+                            <TextBlock x:Name="NicotineCostResultTextBox" RelativePanel.RightOf="NicotineCostTextBox" RelativePanel.AlignBottomWith="NicotineCostTextBox">0</TextBlock>
+                            <TextBlock x:Name="NicotineCostUnitTextBox" RelativePanel.RightOf="NicotineCostResultTextBox" RelativePanel.AlignBottomWith="NicotineCostTextBox">€</TextBlock>
 
-                <TextBlock x:Name="AromaTextBox" Margin="0,6,12,0" RelativePanel.Below="BaseTextBox">Aroma:</TextBlock>
-                <TextBlock x:Name="AromaResultTextBox" RelativePanel.RightOf="AromaTextBox" RelativePanel.AlignLeftWith="NicotineResultTextBox" RelativePanel.AlignBottomWith="AromaTextBox">0</TextBlock>
-                <TextBlock x:Name="AromaUnitTextBox" RelativePanel.RightOf="AromaResultTextBox" RelativePanel.AlignBottomWith="AromaTextBox">ml</TextBlock>
+                            <TextBlock x:Name="BaseCostTextBox" Margin="0,6,12,0" RelativePanel.Below="NicotineCostTextBox">Basis:</TextBlock>
+                            <TextBlock x:Name="BaseCostResultTextBox" RelativePanel.RightOf="BaseCostTextBox" RelativePanel.AlignBottomWith="BaseCostTextBox" RelativePanel.AlignLeftWith="NicotineCostResultTextBox">0</TextBlock>
+                            <TextBlock x:Name="BaseCostUnitTextBox" RelativePanel.RightOf="BaseCostResultTextBox" RelativePanel.AlignBottomWith="BaseCostTextBox">€</TextBlock>
 
-            </RelativePanel>
-            <RelativePanel x:Name="BottomRightPanel" Margin="15,15,15,15" RelativePanel.RightOf="BottomLeftPanel" RelativePanel.AlignHorizontalCenterWith="TopRightPanel" RelativePanel.Below="TopLeftPanel">
-                <TextBlock x:Name="CostsTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Kostenausgabe</TextBlock>
+                            <TextBlock x:Name="AromaCostTextBox" Margin="0,6,12,0" RelativePanel.Below="BaseCostTextBox">Aroma:</TextBlock>
+                            <TextBlock x:Name="AromaCostResultTextBox" RelativePanel.RightOf="AromaCostTextBox" RelativePanel.AlignBottomWith="AromaCostTextBox" RelativePanel.AlignLeftWith="NicotineCostResultTextBox">0</TextBlock>
+                            <TextBlock x:Name="AromaCostUnitTextBox" RelativePanel.RightOf="AromaCostResultTextBox" RelativePanel.AlignBottomWith="AromaCostTextBox">€</TextBlock>
 
-                <TextBlock x:Name="NicotineCostTextBox" Margin="0,6,12,0" RelativePanel.Below="CostsTitle">Nikotinkonzentrat:</TextBlock>
-                <TextBlock x:Name="NicotineCostResultTextBox" RelativePanel.RightOf="NicotineCostTextBox" RelativePanel.AlignBottomWith="NicotineCostTextBox">0</TextBlock>
-                <TextBlock x:Name="NicotineCostUnitTextBox" RelativePanel.RightOf="NicotineCostResultTextBox" RelativePanel.AlignBottomWith="NicotineCostTextBox">€</TextBlock>
+                            <TextBlock x:Name="SumCostTextBox" Margin="0,6,12,0" RelativePanel.Below="AromaCostTextBox">Summe:</TextBlock>
+                            <TextBlock x:Name="SumCostResultTextBox" RelativePanel.RightOf="SumCostTextBox" RelativePanel.AlignBottomWith="SumCostTextBox" RelativePanel.AlignLeftWith="NicotineCostResultTextBox">0</TextBlock>
+                            <TextBlock x:Name="SumCostUnitTextBox" RelativePanel.RightOf="SumCostResultTextBox" RelativePanel.AlignBottomWith="SumCostTextBox">€</TextBlock>
+                        </RelativePanel>
+                    </RelativePanel>
+                    <Button x:Name="Calculate" FontSize="25" Margin="12,12,12,12" Click="Calculate_Click" RelativePanel.Below="BottomPanel" RelativePanel.AlignHorizontalCenterWithPanel="True">Berechnen</Button>
 
-                <TextBlock x:Name="BaseCostTextBox" Margin="0,6,12,0" RelativePanel.Below="NicotineCostTextBox">Basis:</TextBlock>
-                <TextBlock x:Name="BaseCostResultTextBox" RelativePanel.RightOf="BaseCostTextBox" RelativePanel.AlignBottomWith="BaseCostTextBox" RelativePanel.AlignLeftWith="NicotineCostResultTextBox">0</TextBlock>
-                <TextBlock x:Name="BaseCostUnitTextBox" RelativePanel.RightOf="BaseCostResultTextBox" RelativePanel.AlignBottomWith="BaseCostTextBox">€</TextBlock>
+                </RelativePanel>
+            </PivotItem>
+            <PivotItem Header="Kosten">
+                <RelativePanel x:Name="TopRightPanel" Margin="15,15,15,15" >
+                    <TextBlock x:Name="MoneyTitle" FontSize="25" Margin="0,0,0,12" RelativePanel.AlignHorizontalCenterWithPanel="True">Kosteneingabe</TextBlock>
+                    <RelativePanel x:Name="CostPanel" RelativePanel.Below="MoneyTitle" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                        <TextBlock x:Name="CostNicotineConcentrateTextBlock" Margin="0,6,12,0" >Preis Nikotinkonzentrat</TextBlock>
+                        <TextBox x:Name="CostNicotineConcentrateTextBox" Margin="0,0,0,8" RelativePanel.RightOf="CostNicotineConcentrateTextBlock" Width="80" TextChanged="CostNicotineConcentrate_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="CostNicotineConcentrateTextBox" RelativePanel.AlignVerticalCenterWith="CostNicotineConcentrateTextBox">€ pro 100ml</TextBlock>
 
-                <TextBlock x:Name="AromaCostTextBox" Margin="0,6,12,0" RelativePanel.Below="BaseCostTextBox">Aroma:</TextBlock>
-                <TextBlock x:Name="AromaCostResultTextBox" RelativePanel.RightOf="AromaCostTextBox" RelativePanel.AlignBottomWith="AromaCostTextBox" RelativePanel.AlignLeftWith="NicotineCostResultTextBox">0</TextBlock>
-                <TextBlock x:Name="AromaCostUnitTextBox" RelativePanel.RightOf="AromaCostResultTextBox" RelativePanel.AlignBottomWith="AromaCostTextBox">€</TextBlock>
+                        <TextBlock x:Name="CostBaseTextBlock" Margin="0,18,12,0" RelativePanel.Below="CostNicotineConcentrateTextBlock" >Preis Base</TextBlock>
+                        <TextBox x:Name="CostBaseTextBox" Margin="0,0,0,8" RelativePanel.Below="CostNicotineConcentrateTextBox" RelativePanel.AlignLeftWith="CostNicotineConcentrateTextBox" Width="80" TextChanged="CostBaseTextBox_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="CostBaseTextBox" RelativePanel.AlignVerticalCenterWith="CostBaseTextBox">€ pro 100ml</TextBlock>
 
-                <TextBlock x:Name="SumCostTextBox" Margin="0,6,12,0" RelativePanel.Below="AromaCostTextBox">Summe:</TextBlock>
-                <TextBlock x:Name="SumCostResultTextBox" RelativePanel.RightOf="SumCostTextBox" RelativePanel.AlignBottomWith="SumCostTextBox" RelativePanel.AlignLeftWith="NicotineCostResultTextBox">0</TextBlock>
-                <TextBlock x:Name="SumCostUnitTextBox" RelativePanel.RightOf="SumCostResultTextBox" RelativePanel.AlignBottomWith="SumCostTextBox">€</TextBlock>
-            </RelativePanel>
-
-            <Button x:Name="Calculate" FontSize="25" Margin="12,12,12,12" Click="Calculate_Click" RelativePanel.Below="BottomRightPanel" RelativePanel.AlignHorizontalCenterWithPanel="True">Berechnen</Button>
-        </RelativePanel>
+                        <TextBlock x:Name="CostAromaTextBlock" Margin="0,18,12,0" RelativePanel.Below="CostBaseTextBlock" >Preis Aroma</TextBlock>
+                        <TextBox x:Name="CostAromaTextBox" Margin="0,0,0,8" RelativePanel.Below="CostBaseTextBox" RelativePanel.AlignLeftWith="CostBaseTextBox" Width="80" TextChanged="CostAromaTextBox_TextChanged"></TextBox>
+                        <TextBlock RelativePanel.RightOf="CostAromaTextBox" RelativePanel.AlignVerticalCenterWith="CostAromaTextBox">€ pro 100ml</TextBlock>
+                    </RelativePanel>
+                </RelativePanel>
+            </PivotItem>
+        </Pivot>
     </RelativePanel>
 </Page>
